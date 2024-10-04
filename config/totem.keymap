@@ -100,7 +100,7 @@
         &trans  &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH           &trans      &trans     &trans    &trans    &trans  &trans
                                                 &kp SQT       &kp NUMBER_0  &kp MINUS               &to Base      &trans     &trans
         >;
-    }
+    };
 
   };
 };
