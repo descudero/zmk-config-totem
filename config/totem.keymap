@@ -17,8 +17,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define Base        0
-#define Sym         1
-#define Num         2
 
 
 / {
