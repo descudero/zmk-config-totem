@@ -18,36 +18,52 @@
 #define Num         2
 
 / {
+    behaviors {
+        layer_1_layer_2: layer_1_layer_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_1_LAYER_2";
+            #binding-cells = <0>;
+            bindings = <&to 2>, <&to 1>;
+        };
+
+        sqt_to_0: sqt_to_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SQT_TO_0";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&to 0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         Base {
             label = "Base";
             bindings = <
-            &kp Q  &kp W  &kp E  &kp R      &kp T            &kp Y          &kp U      &kp I      &kp O    &kp P
-            &kp A  &kp S  &kp D  &kp F      &kp G            &kp H          &kp J      &kp K      &kp L    &kp SEMICOLON
-&kp ESCAPE  &kp Z  &kp X  &kp C  &kp V      &kp B            &kp N          &kp M      &kp COMMA  &kp DOT  &kp SLASH      &kp LEFT_GUI
-                          &to 1  &kp SPACE  &kp BACKSPACE    &kp BACKSPACE  &kp ENTER  &kp ENTER
-            >;
-        };
-
-        Sym {
-            label = "Sym";
-            bindings = <
-        &kp LEFT_BRACE  &kp AMPERSAND  &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &trans    &trans      &trans     &trans    &trans
-        &kp COLON       &kp DOLLAR     &kp PERCENT           &kp CARET              &kp PLUS           &trans    &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI
-&trans  &kp TILDE       &kp EXCL       &kp AT                &kp HASH               &kp PIPE           &trans    &trans      &trans     &trans    &trans    &trans
-                                       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE     &to Base  &trans      &trans
+                       &kp Q  &kp W  &kp E  &kp R      &kp T            &kp Y      &kp U         &kp I             &kp O    &kp P
+                       &kp A  &kp S  &kp D  &kp F      &kp G            &kp H      &kp J         &kp K             &kp L    &kp SEMICOLON
+&mt ESCAPE LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V      &kp B            &kp N      &kp M         &kp COMMA         &kp DOT  &kp SLASH      &mt RS(RIGHT_SHIFT) RS(RIGHT_SHIFT)
+                                     &none  &kp SPACE  &kp BACKSPACE    &kp ENTER  &kp LEFT_GUI  &layer_1_layer_2
             >;
         };
 
         Num {
             label = "Num";
             bindings = <
-        &kp LEFT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT_BRACKET    &trans    &trans      &trans     &trans    &trans
-        &kp SEMICOLON     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL            &trans    &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI
-&trans  &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH        &trans    &trans      &trans     &trans    &trans    &trans
-                                        &kp SQT       &kp NUMBER_0  &kp MINUS            &to Base  &trans      &trans
+            &kp LEFT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp BACKSLASH    &none      &none       &none         &none      &none
+            &kp SEMICOLON     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL        &none      &kp RSHIFT  &kp UP_ARROW  &kp RALT   &kp RGUI
+&kp ESCAPE  &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0     &kp MINUS  &kp LEFT    &kp DOWN      &kp RIGHT  &none     &kp LEFT_SHIFT
+                                            &to 0         &kp SPACE     &kp BACKSPACE    &kp ENTER  &none       &none
+            >;
+        };
+
+        Sym {
+            label = "Sym";
+            bindings = <
+        &kp GRAVE  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans          &trans          &trans
+        &kp COLON  &kp DOLLAR     &kp PERCENT   &kp CARET       &kp PLUS           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UP_ARROW    &kp RALT        &kp RGUI
+&trans  &kp TILDE  &kp EXCL       &kp AT        &kp HASH        &kp PIPE           &kp DQT               &kp LEFT_ARROW         &kp DOWN_ARROW  &kp LEFT_ARROW  &trans    &trans
+                                  &to 0         &kp SPACE       &kp BACKSPACE      &kp ENTER             &trans                 &trans
             >;
         };
     };
