@@ -11,6 +11,7 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define Base        0
@@ -108,9 +109,9 @@
 
         shortcuts {
             bindings = <
-       &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(T)    &none  &kp LG(LA(C))  &kp LC(LG(F))  &none          &none
-       &none             &none             &none             &none             &none        &none  &kp LG(LC(F))  &kp LG(LC(K))  &kp LG(LC(G))  &none
-&none  &none             &none             &kp LG(C)         &kp RG(V)         &none        &none  &kp LG(LC(I))  &kp LC(LG(O))  &none          &none  &alfred
+       &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(T)    &none  &kp LG(LA(C))  &kp LC(LG(F))  &none          &bt BT_SEL 0
+       &none             &none             &none             &none             &none        &none  &kp LG(LC(F))  &kp LG(LC(K))  &kp LG(LC(G))  &bt BT_CLR_ALL
+&none  &none             &none             &kp LG(C)         &kp RG(V)         &none        &none  &kp LG(LC(I))  &kp LC(LG(O))  &none          &none           &alfred
                                            &none             &none             &none        &none  &none          &none
             >;
         };
