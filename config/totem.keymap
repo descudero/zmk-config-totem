@@ -123,7 +123,7 @@
         link: link {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LBKT &kp LBRC &kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            bindings = <&kp LBKT &kp RIGHT_BRACKET &kp LPAR &kp RPAR &kp LEFT_ARROW>;
             label = "LINK";
         };
     };
@@ -163,10 +163,10 @@
 
         shortcuts {
             bindings = <
-             &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(T)    &none      &kp LG(LA(C))  &kp LC(LG(O))  &none          &kp LG(V)
-             &none             &none             &none             &kp LS(LG(D))     &kp LG(V)    &none      &kp LG(LC(F))  &kp LG(LC(K))  &kp LG(LC(G))  &kp LG(C)
-&kp LA(TAB)  &kp LG(LC(Z))     &kp LG(LC(X))     &kp LG(LC(C))     &kp LG(D)         &kp LG(C)    &kp LALT   &kp LG(LC(I))  &kp LC(LG(F))  &kp LC(LG(K))  &none      &alfred
-                                                 &none             &kp LG(C)         &kp LG(V)    &kp LG(C)  &none          &none
+             &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(T)    &none                 &kp LG(LA(C))  &kp LC(LG(O))  &none          &kp LG(V)
+             &kp LC(LG(S))     &none             &none             &kp LS(LG(D))     &kp LG(V)    &none                 &kp LG(LC(F))  &kp LG(LC(K))  &kp LG(LC(G))  &kp LG(C)
+&kp LG(TAB)  &kp LG(LC(Z))     &kp LG(LC(X))     &kp LG(LC(C))     &kp LG(D)         &kp LG(T)    &kp LALT              &kp LG(LC(I))  &kp LC(LG(F))  &kp LC(LG(K))  &none      &alfred
+                                                 &none             &kp LG(C)         &kp LG(V)    &kp LG(RS(NUMBER_4))  &none          &none
             >;
         };
     };
