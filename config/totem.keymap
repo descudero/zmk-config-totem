@@ -59,7 +59,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             flavor = "tap-preferred";
             hold-trigger-on-release;
         };
@@ -111,6 +111,8 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_GUI &kp LGUI>;
             label = "ALFRED";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         comment: comment {
@@ -118,6 +120,8 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp GRAVE &kp GRAVE &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW &kp ENTER>;
             label = "COMMENT";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         link: link {
@@ -125,6 +129,8 @@
             #binding-cells = <0>;
             bindings = <&kp LBKT &kp RIGHT_BRACKET &kp LPAR &kp RPAR &kp LEFT_ARROW>;
             label = "LINK";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
     };
 
@@ -133,17 +139,22 @@
 
         alt_tab {
             bindings = <&kp LG(TAB)>;
-            key-positions = <23 24>;
+            key-positions = <0 33>;
         };
 
         paste {
             bindings = <&kp LG(V)>;
-            key-positions = <1 13>;
+            key-positions = <24 23>;
         };
 
         copy {
             bindings = <&kp LG(C)>;
-            key-positions = <24 1>;
+            key-positions = <24 25>;
+        };
+
+        undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <34 21>;
         };
     };
 
