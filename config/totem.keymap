@@ -139,17 +139,17 @@
 
         alt_tab {
             bindings = <&kp LG(TAB)>;
-            key-positions = <0 33>;
+            key-positions = <0 34>;
         };
 
         paste {
             bindings = <&kp LG(V)>;
-            key-positions = <24 23>;
+            key-positions = <24 34>;
         };
 
         copy {
             bindings = <&kp LG(C)>;
-            key-positions = <24 25>;
+            key-positions = <23 34>;
         };
 
         undo {
