@@ -112,6 +112,20 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        alfred_q: alfred_q {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALFRED_Q";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&alfred>;
+        };
+
+        clipboard_w: clipboard_w {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CLIPBOARD_W";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp LA(LG(C))>;
+        };
     };
 
     macros {
@@ -180,6 +194,16 @@
             bindings = <&kp LG(F)>;
             key-positions = <34 13>;
         };
+
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <34 22>;
+        };
+
+        slack {
+            bindings = <&kp LG(K)>;
+            key-positions = <33 3>;
+        };
     };
 
     keymap {
@@ -188,10 +212,10 @@
         Base {
             label = "Base";
             bindings = <
-                          &kp Q           &kp_kp AT W  &kp E                 &kp R      &kp T            &kp Y         &kp U              &kp I            &kp O    &kp_kp MINUS P
-                          &kp_kp AT A     &kp S        &kp D                 &kp F      &kp G            &kp H         &kp J              &kp K            &kp L    &kp_kp PIPE SEMICOLON
-&kp_sk LEFT_SHIFT ESCAPE  &kp_kp LCTRL Z  &kp X        &kp C                 &kp V      &kp B            &kp_kp SQT N  &kp M              &kp COMMA        &kp DOT  &kp_kp QUESTION SLASH  &sl_sk LEFT_SHIFT 3
-                                                       &kp_kp RIGHT_GUI TAB  &kp SPACE  &kp BACKSPACE    &kp ENTER     &sk_mo 1 LEFT_ALT  &lt 2 LA(LG(C))
+                          &alfred_q       &clipboard_w  &kp E                 &kp R      &kp T            &kp Y         &kp U              &kp I            &kp O    &kp_kp MINUS P
+                          &kp_kp AT A     &kp S         &kp D                 &kp F      &kp G            &kp H         &kp J              &kp K            &kp L    &kp_kp PIPE SEMICOLON
+&kp_sk LEFT_SHIFT ESCAPE  &kp_kp LCTRL Z  &kp X         &kp C                 &kp V      &kp B            &kp_kp SQT N  &kp M              &kp COMMA        &kp DOT  &kp_kp QUESTION SLASH  &sl_sk LEFT_SHIFT 3
+                                                        &kp_kp RIGHT_GUI TAB  &kp SPACE  &kp BACKSPACE    &kp ENTER     &sk_mo 1 LEFT_ALT  &lt 2 LA(LG(C))
             >;
         };
 
