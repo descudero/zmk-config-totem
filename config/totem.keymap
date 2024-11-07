@@ -119,7 +119,7 @@
             #binding-cells = <0>;
             bindings = <&kp Q>, <&alfred>;
 
-            tapping-term-ms = <160>;
+            tapping-term-ms = <250>;
         };
 
         clipboard_w: clipboard_w {
