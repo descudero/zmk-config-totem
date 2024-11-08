@@ -199,10 +199,10 @@
         Base {
             label = "Base";
             bindings = <
-                          &kp Q           &clipboard_w  &kp E      &kp R      &kp T           &kp Y         &kp U                   &kp I            &kp_kp UNDER O  &kp_kp MINUS P
-                          &kp_kp AT A     &kp S         &kp D      &kp F      &kp G           &kp H         &kp J                   &kp K            &kp L           &kp_kp PIPE SEMICOLON
-&kp_sk LEFT_SHIFT ESCAPE  &kp_kp LCTRL Z  &kp X         &kp C      &kp V      &kp B           &kp_kp SQT N  &kp_kp DOUBLE_QUOTES M  &kp COMMA        &kp DOT         &kp_kp QUESTION SLASH  &sl_sk LEFT_SHIFT 3
-                                                        &lt 1 TAB  &kp SPACE  &kp LEFT_GUI    &kp ENTER     &lt 1 BACKSPACE         &lt 2 LA(LG(C))
+                          &kp Q           &clipboard_w  &kp E      &kp R      &kp T           &kp Y          &kp U                   &kp I            &kp_kp UNDER O  &kp_kp MINUS P
+                          &kp_kp AT A     &kp S         &kp D      &kp F      &kp G           &kp H          &kp J                   &kp K            &kp L           &kp_kp PIPE SEMICOLON
+&kp_sk LEFT_SHIFT ESCAPE  &kp_kp LCTRL Z  &kp X         &kp C      &kp V      &kp B           &kp_kp SQT N   &kp_kp DOUBLE_QUOTES M  &kp COMMA        &kp DOT         &kp_kp QUESTION SLASH  &sl_sk LEFT_SHIFT 3
+                                                        &lt 1 TAB  &kp SPACE  &kp LEFT_GUI    &kp BACKSPACE  &lt 1 SPACE             &lt 2 LA(LG(C))
             >;
         };
 
