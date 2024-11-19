@@ -169,7 +169,7 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <34 33>;
+            key-positions = <33 32>;
         };
 
         slack {
@@ -184,12 +184,32 @@
 
         enter-2 {
             bindings = <&kp ENTER>;
-            key-positions = <35 36>;
+            key-positions = <36 37>;
         };
 
         tab-e {
             bindings = <&kp TAB>;
             key-positions = <5 15>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <24 13>;
+        };
+
+        backspace-2 {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <16 27>;
+        };
+
+        enter-3 {
+            bindings = <&kp ENTER>;
+            key-positions = <33 34>;
+        };
+
+        enter-4 {
+            bindings = <&kp ENTER>;
+            key-positions = <36 35>;
         };
     };
 
@@ -199,20 +219,20 @@
         Base {
             label = "Base";
             bindings = <
-                          &kp Q           &clipboard_w  &kp E      &kp R      &kp T           &kp Y          &kp U                   &kp I            &kp_kp UNDER O  &kp_kp MINUS P
-                          &kp_kp AT A     &kp S         &kp D      &kp F      &kp G           &kp H          &kp J                   &kp K            &kp L           &kp_kp PIPE SEMICOLON
-&kp_sk LEFT_SHIFT ESCAPE  &kp_kp LCTRL Z  &kp X         &kp C      &kp V      &kp B           &kp_kp SQT N   &kp_kp DOUBLE_QUOTES M  &kp COMMA        &kp DOT         &kp_kp QUESTION SLASH  &sl_sk LEFT_SHIFT 3
-                                                        &lt 1 TAB  &kp SPACE  &kp LEFT_GUI    &kp BACKSPACE  &lt 1 SPACE             &lt 2 LA(LG(C))
+                          &kp Q           &clipboard_w  &kp E      &kp R      &kp T         &kp Y          &kp U                   &kp I      &kp_kp UNDER O  &kp_kp MINUS P
+                          &kp_kp AT A     &kp S         &kp D      &kp F      &kp G         &kp H          &kp J                   &kp K      &kp L           &kp_kp PIPE SEMICOLON
+&kp_sk LEFT_SHIFT ESCAPE  &kp_kp LCTRL Z  &kp X         &kp C      &kp V      &kp B         &kp_kp SQT N   &kp_kp DOUBLE_QUOTES M  &kp COMMA  &kp DOT         &kp_kp QUESTION SLASH  &sl_sk LEFT_SHIFT 3
+                                                        &lt 1 TAB  &kp SPACE  &lt 4 LGUI    &kp BACKSPACE  &lt 1 SPACE             &lt 2 TAB
             >;
         };
 
         Num {
             label = "Num";
             bindings = <
-        &kp N1         &kp N2     &kp N3                &kp N4                 &kp N5      &kp N6     &kp N7    &kp N8        &kp N9     &kp N0
-        &kp SEMICOLON  &kp MINUS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOT     &kp EQUAL  &trans    &kp UP_ARROW  &trans     &kp MINUS
-&trans  &kp GRAVE      &kp AT     &kp LBKT              &kp RBKT               &kp PLUS    &kp MINUS  &kp LEFT  &kp DOWN      &kp RIGHT  &kp SLASH  &trans
-                                  &trans                &trans                 &trans      &trans     &trans    &trans
+        &kp N1         &kp N2     &kp N3                &kp N4                 &kp N5      &kp N6     &kp N7     &kp N8        &kp N9         &kp N0
+        &kp SEMICOLON  &kp MINUS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOT     &kp EQUAL  &kp UNDER  &kp UP_ARROW  &kp BACKSLASH  &kp COLON
+&trans  &kp GRAVE      &kp AT     &kp LBKT              &kp RBKT               &kp PLUS    &kp MINUS  &kp LEFT   &kp DOWN      &kp RIGHT      &kp SLASH  &trans
+                                  &trans                &trans                 &trans      &trans     &trans     &trans
             >;
         };
 
@@ -221,7 +241,7 @@
             bindings = <
         &kp GRAVE  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS       &trans          &trans
         &kp COLON  &kp DOLLAR     &kp PERCENT   &kp CARET       &kp PLUS           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UP_ARROW    &kp RALT        &none
-&trans  &kp TILDE  &kp EXCL       &kp AT        &kp HASH        &kp PIPE           &kp DQT               &kp LEFT_ARROW         &kp DOWN_ARROW  &kp LEFT_ARROW  &trans  &trans
+&trans  &kp TILDE  &kp EXCL       &kp AT        &kp HASH        &kp PIPE           &kp DQT               &kp LEFT_ARROW         &kp DOWN_ARROW  &kp LEFT_ARROW  &kp BACKSLASH  &trans
                                   &trans        &trans          &trans             &trans                &trans                 &trans
             >;
         };
@@ -232,6 +252,16 @@
              &kp LC(LG(S))     &none             &none             &kp LS(LG(D))     &none        &link                 &kp LG(LC(F))  &kp LG(LC(K))  &kp LG(LC(G))  &kp LG(C)
 &kp LG(TAB)  &kp LG(LC(Z))     &kp LG(LC(X))     &kp LG(LC(C))     &kp LG(D)         &kp LG(T)    &kp LALT              &kp LG(LC(I))  &kp LC(LG(F))  &kp LC(LG(K))  &none      &alfred
                                                  &none             &kp LG(C)         &alfred      &kp LG(RS(NUMBER_4))  &none          &none
+            >;
+        };
+
+        meta {
+            label = "meta";
+            bindings = <
+                &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)    &kp LG(Y)  &kp LG(U)  &kp LG(I)      &kp LG(O)    &kp LG(MINUS)
+                &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)    &kp LG(H)  &kp LG(J)  &kp LG(K)      &kp LG(L)    &kp LG(SEMICOLON)
+&kp LEFT_SHIFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &none        &kp LG(N)  &kp LG(M)  &kp LG(COMMA)  &kp LG(DOT)  &kp LG(SLASH)      &kp RIGHT_SHIFT
+                                      &trans     &kp SPACE  &none        &trans     &none      &trans
             >;
         };
     };
