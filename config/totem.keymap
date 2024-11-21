@@ -137,7 +137,7 @@
             bindings = <&kp LEFT_GUI &kp LGUI>;
             label = "ALFRED";
             wait-ms = <1>;
-            tap-ms = <20>;
+            tap-ms = <40>;
         };
 
         comment: comment {
@@ -156,6 +156,13 @@
             label = "LINK";
             wait-ms = <1>;
             tap-ms = <1>;
+        };
+
+        save_vim: save_vim {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp W>;
+            label = "SAVE_VIM";
         };
     };
 
@@ -248,8 +255,8 @@
 
         shortcuts {
             bindings = <
-             &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &none        &comment              &kp LG(LA(C))  &kp LC(LG(O))  &none          &kp LG(V)
-             &kp LC(LG(S))     &none             &none             &kp LS(LG(D))     &none        &link                 &kp LG(LC(F))  &kp LG(LC(K))  &kp LG(LC(G))  &kp LG(C)
+             &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &none        &comment              &kp LG(LA(C))  &kp LC(LG(O))  &none          &save_vim
+             &kp LC(LG(S))     &none             &none             &kp LS(LG(D))     &none        &link                 &kp LG(LC(F))  &kp LG(LC(K))  &kp LG(LC(G))  &none
 &kp LG(TAB)  &kp LG(LC(Z))     &kp LG(LC(X))     &kp LG(LC(C))     &kp LG(D)         &kp LG(T)    &kp LALT              &kp LG(LC(I))  &kp LC(LG(F))  &kp LC(LG(K))  &none      &alfred
                                                  &none             &kp LG(C)         &alfred      &kp LG(RS(NUMBER_4))  &none          &none
             >;
