@@ -265,10 +265,10 @@
         meta {
             label = "meta";
             bindings = <
-                &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)    &kp LG(Y)  &kp LG(U)  &kp LG(I)      &kp LG(O)    &kp LG(MINUS)
-                &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)    &kp LG(H)  &kp LG(J)  &kp LG(K)      &kp LG(L)    &kp LG(SEMICOLON)
-&kp LEFT_SHIFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &none        &kp LG(N)  &kp LG(M)  &kp LG(COMMA)  &kp LG(DOT)  &kp LG(SLASH)      &kp RIGHT_SHIFT
-                                      &trans     &kp SPACE  &none        &trans     &none      &trans
+                &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)    &kp LG(Y)             &kp LG(U)  &kp LG(I)      &kp LG(O)    &kp LG(MINUS)
+                &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)    &kp LG(H)             &kp LG(J)  &kp LG(K)      &kp LG(L)    &kp LG(SEMICOLON)
+&kp LEFT_SHIFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &none        &kp LG(N)             &kp LG(M)  &kp LG(COMMA)  &kp LG(DOT)  &kp LG(SLASH)      &kp RIGHT_SHIFT
+                                      &trans     &kp SPACE  &none        &kp LG(LS(NUMBER_4))  &none      &trans
             >;
         };
     };
