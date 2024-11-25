@@ -143,7 +143,7 @@
         comment: comment {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW &kp ENTER>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
             label = "COMMENT";
             wait-ms = <1>;
             tap-ms = <1>;
@@ -152,7 +152,7 @@
         link: link {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LBKT &kp RIGHT_BRACKET &kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            bindings = <&kp LBKT &kp RIGHT_BRACKET &kp LPAR &kp RPAR>;
             label = "LINK";
             wait-ms = <1>;
             tap-ms = <1>;
@@ -255,10 +255,10 @@
 
         shortcuts {
             bindings = <
-             &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &none        &comment              &kp LG(LA(C))  &kp LC(LG(O))  &none          &save_vim
-             &kp LC(LG(S))     &none             &none             &kp LS(LG(D))     &none        &link                 &kp LG(LC(F))  &kp LG(LC(K))  &kp LG(LC(G))  &none
-&kp LG(TAB)  &kp LG(LC(Z))     &kp LG(LC(X))     &kp LG(LC(C))     &kp LG(D)         &kp LG(T)    &kp LALT              &kp LG(LC(I))  &kp LC(LG(F))  &kp LC(LG(K))  &none      &alfred
-                                                 &none             &kp LG(C)         &alfred      &kp LG(RS(NUMBER_4))  &none          &none
+        &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &none      &comment  &kp LG(LA(C))  &kp LC(LG(O))  &none          &save_vim
+        &kp LC(LG(S))     &none             &none             &kp LS(LG(D))     &none      &link     &kp LG(LC(F))  &kp LG(LC(K))  &kp LG(LC(G))  &none
+&trans  &kp LG(LC(Z))     &kp LG(LC(X))     &kp LG(LC(C))     &kp LG(D)         &none      &kp LALT  &kp LG(LC(I))  &kp LC(LG(F))  &kp LC(LG(K))  &none      &alfred
+                                            &none             &none             &alfred    &trans    &none          &none
             >;
         };
 
