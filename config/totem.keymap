@@ -186,7 +186,7 @@
 
         tab_aine {
             bindings = <&kp TAB>;
-            key-positions = <4 14 19 29 30 31>;
+            key-positions = <4 14>;
         };
 
         enter-2 {
