@@ -186,17 +186,12 @@
 
         tab_aine {
             bindings = <&kp TAB>;
-            key-positions = <4 14>;
+            key-positions = <4 14 19 29 30 31>;
         };
 
         enter-2 {
             bindings = <&kp ENTER>;
             key-positions = <36 37>;
-        };
-
-        tab-e {
-            bindings = <&kp TAB>;
-            key-positions = <5 15>;
         };
 
         backspace {
